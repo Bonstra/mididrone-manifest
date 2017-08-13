@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+ <!--parrot github remote server -->
+ <remote name="parrot" fetch="https://github.com/Parrot-Developers/"/>
+ <remote name="bonstra" fetch="https://github.com/Bonstra/"/>
+ <default remote="bonstra" revision="master" sync-j="4"/>
+
+<!-- dragon build  -->
+ <project remote="parrot" name="dragon_build" path="build/dragon_build">
+    <linkfile src="root-build.sh" dest="build.sh"/>
+    <linkfile src="root-track-branch.sh" dest="track-branch.sh"/>
+ </project>
+ <project remote="parrot" name="Alchemy" path="build/alchemy"/>
+
+ <project name="linux-minidrones" path="packages/linux"/>
+
+ <project remote="parrot" name="libpomp" path="packages/libpomp"/>
+ <project remote="parrot" name="libfutils" path="packages/libfutils"/>
+ <project remote="parrot" name="ulog" path="packages/ulog"/>
+
+ <project name="portsmf" path="packages/portsmf"/>
+ <project name="mididrone" path="packages/mididrone"/>
+
+ <project name="products_minidrones" path="products/minidrones"/>
+ <project name="products_native" path="products/native"/>
+
+</manifest>
